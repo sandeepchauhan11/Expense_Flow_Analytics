@@ -1,0 +1,93 @@
+:root {
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #1f2937;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 { margin-bottom: 20px; text-align: center; }
+h3 { margin-bottom: 10px; margin-top: 30px; font-size: 1.1rem; border-bottom: 1px solid #d1d5db; padding-bottom: 5px; }
+
+.balance-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.balance-card h1 { font-size: 2.5rem; margin: 10px 0; }
+
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.inc-exp-container > div { flex: 1; }
+.inc-exp-container > div:first-of-type { border-right: 1px solid #e5e7eb; }
+
+.money.plus { color: #10b981; font-weight: 600; font-size: 1.2rem; }
+.money.minus { color: #ef4444; font-weight: 600; font-size: 1.2rem; }
+
+/* Form Styling */
+.form-control { margin-bottom: 15px; }
+label { display: inline-block; margin-bottom: 5px; font-size: 0.9rem; }
+input { border: 1px solid #d1d5db; border-radius: 6px; padding: 12px; width: 100%; outline: none; }
+input:focus { border-color: #3b82f6; }
+
+.btn {
+  background-color: #3b82f6;
+  color: white;
+  border: 0;
+  padding: 12px;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn:hover { background-color: #2563eb; }
+
+/* Dynamic List Styling */
+.list { list-style-type: none; }
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border-left: 5px solid #10b981; /* Default to green */
+}
+.list li.minus { border-left-color: #ef4444; } /* Red for expenses */
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+  border: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
